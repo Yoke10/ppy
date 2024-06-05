@@ -1,0 +1,39 @@
+Linear Search
+
+no_of_elements = int( input('Enter the size of list: '))
+array =[]
+#Read Array elements
+print( 'Enter the elements of the list: ')
+for i in range(0,no_of_elements,1):
+ element=int(input())
+ array.append(element)
+#read the element to be searched
+s= int(input('Enter the search element: '))
+#linear search
+for i in range(0,no_of_elements,1):
+ if s == array[i]:
+  flag=1
+  break
+#display search status
+if flag==1:
+ print ('Element is found in: {}'.format(i+1))
+else:
+ print('Element not Found')
+
+Binary Search
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid  
+        elif arr[mid] < target:
+            left = mid + 1  
+        else:
+            right = mid - 1      
+    return -1  
+arr = [10,20,30,40]
+target = 20
+print(binary_search(arr,target))

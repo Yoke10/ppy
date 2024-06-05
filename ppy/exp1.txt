@@ -1,0 +1,27 @@
+#original
+
+
+N1 = int(input("Enter first number: "))
+N2 = int(input("Enter second number: "))
+
+
+while N2 != 0:
+    N1, N2 = N2, N1 % N2
+
+# Print the GCD
+print('GCD: {}'.format(N1))
+
+
+#easy
+
+import math
+
+# Get input from the user
+N1 = int(input("Enter first number: "))
+N2 = int(input("Enter second number: "))
+
+# Calculate the GCD using the built-in function
+gcd = math.gcd(N1, N2)
+
+# Print the result
+print('GCD: {}'.format(gcd))

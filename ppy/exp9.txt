@@ -1,0 +1,14 @@
+filename = "sample.txt"
+wordCounter = {}
+
+with open(filename , 'r' ) as fh:
+    for line in fh:
+        wordlist = line.replace('.','').replace(',','').replace('-','').replace('\'','').lower().split()
+        for word in wordlist:
+            if word not in wordCounter:
+                wordCounter[word] = 1
+            else:
+                wordCounter[word] = wordCounter[word]+1
+
+for (word,occurrance) in wordCounter.items():
+    print(word,occurrance)

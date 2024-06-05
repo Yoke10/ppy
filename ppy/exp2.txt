@@ -1,0 +1,30 @@
+
+#original
+number = float(input("Enter a number: "))
+
+trials = 10
+
+approx = 0.5 * number
+
+# Perform the Newton-Raphson iteration
+for i in range(trials):
+    better = 0.5 * (approx + number / approx)
+    approx = better
+
+# Print the result
+print('Approximate square root: {}'.format(better))
+
+#easy
+
+import math
+
+# Get input from the user
+number = float(input("Enter a number: "))
+
+# Calculate the square root using the built-in function
+square_root = math.sqrt(number)
+
+# Print the result
+print('Square root: {}'.format(square_root))
+
+

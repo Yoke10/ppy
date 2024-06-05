@@ -1,0 +1,9 @@
+def find_power(base, exponent):
+    result = 1
+    for i in range(exponent):
+        result *= base
+    return result
+a=int(input("enter base: "))
+b=int(input("enter exponent: "))
+# Test the function
+print(find_power(a, b))
