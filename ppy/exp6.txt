@@ -54,3 +54,26 @@ def merge(left, right):
 
 arr = [22, 55, 77, 9, 1]
 print(merge_sort(arr))
+
+def merge_sort(array,n):
+    for i in range(n - 1):
+        for j in range(i + 1, n):
+            if (array[i] > array[j]):
+                temp = array[i]
+                array[i] = array[j]
+                array[j] = temp
+
+    return array
+
+n = 5
+list1 =[]
+
+for i in range(n):
+    ele = int(input("Enter the ele"))
+    list1.append(ele)
+
+
+print(merge_sort(list1,n))
+
+
+
